@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/newroute.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../picture/Icon.png"/>
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Vango - NewRoute</title>
+</head>
+<body class="noselect" style="background-image: url('../picture/BG2.png');" ng-app="formModule" ng-controller="formController" method="POST">
+    <br></br>
+    <center><a style="font-size: 42px; color: whitesmoke; text-shadow: 3px 3px 4px black;">สร้างรอบการเดินรถใหม่</a></center>
+    <form>
+        <div class="newroute">
+            <label for="from">ต้นทาง</label>
+            <select style="width: 200px; float:right;" class="profile" id="from" name = "from" required>
+                <option value="-" id="f0" disabled selected>เลือก</option>
+                <option value="1" id="f1">ม.ธรรมศาสตร์</option>
+                <option value="2" id="f2">ฟิวเจอร์ปาร์ค</option>
+                <option value="3" id="f3">อนุสาวรีย์ชัยฯ</option>
+                <option value="4" id="f4">BTSหมอชิต</option>
+            </select>
+            <br></br><br>
+            <label for="exit">ปลายทาง</label>
+            <select style="width: 200px; float:right;" class="profile" id="exit" name = "exit" required>
+                <option value="-" id="e0" disabled selected>เลือก</option>
+                <option value="1" id="e1">ม.ธรรมศาสตร์</option>
+                <option value="2" id="e2">ฟิวเจอร์ปาร์ค</option>
+                <option value="3" id="e3">อนุสาวรีย์ชัยฯ</option>
+                <option value="4" id="e4">BTSหมอชิต</option>
+            </select>
+            <br></br><br>
+            <label for="date">วันที่</label>
+            <input type="date" style="width: 200px; float:right;" class="profile" id="date" name = "date" required>
+            <br></br><br>
+            <label for="time">เวลา</label>
+            <input type="time" style="width: 200px; float:right;" class="profile" id="time" name = "time" required>
+            <br></br><br>
+            <label for="price">ราคาตั๋ว</label>
+            <input type="text" maxlength="3" style="width: 200px; float:right;" class="profile" id="price" name = "price" required>
+            <br></br>
+            <center><p style="color: red;" id="alert">{{alert}}</button></center>
+            <label for="btns"></label>
+            <br>
+            <button class="bookingsubmit springs" style="cursor: pointer;" id="btns">สร้าง</button>
+            <div class="editprofile">
+                <a href="/home"><img style="z-index: 1; width: 30px; height: 30px;" class="btn springs" src="../picture/Back.png"></a>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

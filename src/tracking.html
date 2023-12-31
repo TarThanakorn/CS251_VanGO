@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/tracking.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="./picture/Icon.png"/>
+    <link rel="stylesheet" href="./css/custom.css">
+    <title>Vango - Tracking</title>
+</head>
+<body class="noselect" style="background-image: url('./picture/BG1.png');" ng-app="formModule" ng-controller="formController" ng-init="init()">
+    <div class="home" style="position: relative; min-width: 920px;">
+        <img class="tracking" id="profilepicture" src="./profile/Profile.png" style="pointer-events: none;">
+        <a class="tracking" id="name" style="position: absolute; padding-left: 22%; top: 5%; font-size: 32px;">{{user}}</a>
+        <br></br><br>
+        <div>
+            <img style="margin-left: 4%; width: 400px; height: 230px; cursor: pointer; pointer-events: none;" class="" id="t1" src="../picture/Ticket.png">
+            <img style="margin-left: 6%; width: 400px; height: 230px; cursor: pointer; pointer-events: none;" class="" id="t2" src="../picture/Ticket.png">
+            <div>
+                <p style="position: absolute; margin-left: 230px; margin-top: -150px;">ขึ้น: {{enter1}}</p>
+                <p style="position: absolute; margin-left: 230px; margin-top: -129px;">ลง: {{exit1}}</p>
+                <p style="position: absolute; margin-left: 230px; margin-top: -105px;">วันที่: {{day1}}</p>
+                <p style="position: absolute; margin-left: 230px; margin-top: -82px;">เวลา: {{time1}}</p>
+                <p style="position: absolute; margin-left: 267px; margin-top: -49px;">ที่นั่ง {{seat1}}</p>
+            </div>
+            <div>
+                <p style="position: absolute; margin-left: 690px; margin-top: -150px;">ขึ้น: {{enter2}}</p>
+                <p style="position: absolute; margin-left: 690px; margin-top: -129px;">ลง: {{exit2}}</p>
+                <p style="position: absolute; margin-left: 690px; margin-top: -105px;">วันที่: {{day2}}</p>
+                <p style="position: absolute; margin-left: 690px; margin-top: -82px;">เวลา: {{time2}}</p>
+                <p style="position: absolute; margin-left: 727px; margin-top: -49px;">ที่นั่ง {{seat2}}</p>
+            </div>
+        </div>
+        
+        <center><a class="previous round" id="prev" >&#8249;</a>
+        <a id="page">1</a>
+        <a class="next round" id="next">&#8250;</a></center>
+    </div>
+    <br></br>
+    <a style="text-decoration: none; cursor: pointer;" href="/home"><input type="button" class="logout springs"  value="กลับหน้าหลัก"></a>
+</body>
+</html>

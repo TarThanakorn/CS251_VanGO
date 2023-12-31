@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/editstatus.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../picture/Icon.png"/>
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Vango - EditStatus</title>
+</head>
+<body class="noselect" style="background-image: url('../picture/BG1.png');" ng-app="formModule" ng-controller="formController" ng-init="init()">
+    <br>
+    <center><a style="font-size: 42px; color: whitesmoke; text-shadow: 3px 3px 4px black;">เปลี่ยนสถานะรถตู้</a></center>
+    <div class="profilebox">
+        <div ng-bind-html="table">
+        </div>
+    </div>
+<a style="text-decoration: none; cursor: default;" href="/home"><input type="button" style="margin-top: 3vh;" class="logout springs"  value="ย้อนกลับ"></a>
+</body>
+</html>

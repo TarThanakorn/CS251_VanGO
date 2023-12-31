@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/profile.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../picture/Icon.png"/>
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Vango - Profile</title>
+</head>
+<body class="noselect" style="background-image: url('../picture/BG1.png');" ng-app="formModule" ng-controller="formController" ng-init="init()">
+    <br></br><br></br><br></br><br></br>
+    <form method="POST" action="/uploadprofile" enctype="multipart/form-data">
+        <input type="hidden" id="UID" name="UID" value="{{id}}" >
+        <div class="profilebox">
+            <div class="editprofile">
+                <a href="/logout"><img style="position: absolute; top: -20%; margin-left: 700%;" class="btn springs" src="../picture/Logout.png"></a>
+                <a href="/home"><img style="position: absolute; top: -20%; left: -700%px;" class="btn springs" src="../picture/Back.png"></a>
+            </div>
+            <br></br>
+            <center><h1 class="login">{{user}}</h1></center><br>
+			<center><div class="profile">
+				<label for="fname">ชื่อ</label>
+				<input style="width: 280px;" class="profile springs" type="text" id="fname" name = "fname" maxlength="30" value="{{fname}}" required>
+				<label for="lname">นามสกุล</label>
+				<input style="width: 280px;" class="profile springs" type="text" id="lname" name = "lname" maxlength="30" value="{{lname}}" required>
+                <br><br>
+			</div></center>
+			<center><div class="profile">
+				<label for="bdate">วัดเกิด</label>
+				<input style="width: 300px;" class="profile springs" type="date" id="bdate" name = "bdate" value="{{bdate}}" required>
+				<label for="gender">เพศ</label>
+				<select style="width: 280px;" class="profile springs" id="gender" name = "gender" value="{{gender}}" required>
+                <option value="M" id="g1">ชาย</option>
+                <option value="F" id="g2">หญิง</option>
+                <option value="L" id="g3">LGBTQIA+</option>
+                <option value="-" id="g4">ไม่ระบุ</option>
+                </select>
+                <br><br>
+			</div></center>
+			<center><div class="profile">
+                <label for="phone">เบอร์</label>
+				<input style="width: 250px;" class="profile springs" type="tel" id="tel" maxlength="10" name = "tel" pattern="[0]{1}[0-9]{2}[0-9]{3}[0-9]{4}" value="{{tel}}" required>
+				<label for="acctype">ประเภทบัญชี</label>
+				<input style="width: 270px;" class="profile springs" type="text" id="acctype" name = "acctype" value="{{acctype}}" readonly>
+			</div></center>
+            <form method="POST" action="/uploadprofile" enctype="multipart/form-data">
+                <input type="file" name="file" id="file" style="display:none;" accept="image/png, image/gif, image/jpeg">
+                <div class="editprofile">
+                    
+                    <label for="file">
+                        <img class="profile" id="profilepicture" src="">
+                        <div class="epoverlay" id="afterchangeimg1">
+                            <div class="eptext" id="afterchangeimg2">Edit Picture</div>
+                        </div>
+                    </label>
+                </div>
+                <button class="profilesubmit springs" style="cursor: pointer;">บันทึก</button>
+            </form>
+            <br>
+        </div>
+    </form>
+</body>
+</html>

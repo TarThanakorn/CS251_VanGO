@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/login.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="./picture/Icon.png"/>
+    <link rel="stylesheet" href="./css/custom.css">
+    <title>Vango - เข้าสู่ระบบ</title>
+</head>
+<body class="noselect" style="background-image: url('./picture/BG1.png');">
+    <form id="formlogin" action="" method="POST">
+        <div class="login0"> 
+            <div class="login1">
+                <br></br>
+                <center><h1 class="login">VanGO!</h1></center><br>
+                <div class="login2">
+                    <center><input class="login springs" type="text" name="username" placeholder="Username" required></center>
+                </div>
+                <br>
+                <p></p>
+                <div class="login2">
+                    <center><input class="login springs" type="password" name="password" placeholder="Password" required></center>
+                </div>
+                <% if (locals.login_errors) { 
+                    login_errors.forEach(function(error_msg){ %>
+                        <strong><p style="font-size: 20px; text-align: center; color: #a83232"></strong><%= error_msg %></p>
+                <%  });
+                } %>
+            </div>
+            <center><img class="logo" src="./picture/Logo.png"></center>
+        </div>
+        <br></br>
+        <div style="min-width: 400px;">
+            <input style="cursor: pointer;" class="loginsubmit springs" type="submit" value="Log in">
+            <br>
+            <input style="cursor: pointer; margin-top: 0px;" class="loginsubmit springs" type="button" id="register" value="Register">
+        </div>
+    </form>
+    <form id="formregister" action="/reg" method="POST" hidden>
+        <div class="login0"> 
+            <div class="login1">
+                <a href="/"><img style="margin-left: 0%; width: 40px; height: 40px;" class="btn springs" id="back" src="../picture/Back.png"></a>
+                <img class="logo" src="./picture/Logo.png">
+                <br></br>
+                <center><h1 class="login">Register</h1></center><br>
+                <div class="login2">
+                    <center><input class="reg springs" type="text" name="username" id="regusername" placeholder="Username" required></center>
+                </div>
+                <br>
+                <div class="login2">
+                    <center><input class="reg springs" type="password" name="password" placeholder="Password" required></center>
+                </div>
+                <br>
+                <div class="login2">
+                    <center><input class="reg springs" type="password" name="passwordcon" placeholder="Confirm Password" required></center>
+                </div>
+                <% if (locals.register_errors) { 
+                    register_errors.forEach(function(error_msg){ 
+                        if(error_msg == 'ลงทะเบียนสำเร็จ'){%>
+                        <strong><p style="font-size: 20px; text-align: center; color: #32a846" id="error"></strong><%= error_msg %></p>
+                        <%}else{%>
+                        <strong><p style="font-size: 20px; text-align: center; color: #a83232" id="error"></strong><%= error_msg %></p>
+                        <%}
+                    });
+                } %>
+            </div>
+        </div>
+        <br></br>
+        <input style="cursor: pointer;" class="loginsubmit springs" type="submit" id="submitregister" value="Register">
+    </form>
+</body>
+
+</html>
+

@@ -1,0 +1,468 @@
+html,body {
+	font-family: 'Mitr';
+}
+body { 
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+br {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+h1.login{
+	margin: auto;
+	font-size: 42px;
+}
+p.home{
+	font-size: 28px;
+}
+p.booking{
+    position: absolute;
+    z-index: 2;
+	font-size: 28px;
+    right: 130px;
+    top: -10px;
+    color: white;
+    text-shadow: 2px 2px #000;
+    opacity: 0;
+}
+div.login0{
+    position: relative;
+    top: 20vh;
+}
+div.login1 {
+    z-index: 0;
+    border-radius: 35px;
+    width: 80%;
+    min-width: 400px;
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background-color: #FBFBFB;
+    opacity:0.9;
+}
+div.login2{
+    opacity:1;
+}
+div.home {
+    top: 25vh;
+    border-radius: 35px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54%;
+    padding: 40px;
+    background-color: #FBFBFB;
+    opacity:1;
+}
+div.profilebox {
+    border-radius: 25px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    padding: 40px;
+    background-color: #FBFBFB;
+}
+div.payment {
+    border-radius: 35px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding: 30px;
+    background-color: #FBFBFB;
+}
+div.profile{
+	margin: auto;
+	font-size: 22px;
+}
+div.block_container {
+    border-radius: 35px;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    padding: 40px;
+}
+div.newroute {
+    z-index: 0;
+    border-radius: 35px;
+    margin: auto;
+    margin-left: auto;
+    width: 300px;
+    height: 450px;
+    padding: 40px;
+    background-color: #FBFBFB;
+}
+div.bookingbox {
+    z-index: 0;
+    position: absolute;
+    float: left;
+    border-radius: 35px;
+    width: 300px;
+    padding: 40px;
+    background-color: #FBFBFB;
+}
+div.bookingbox2 {
+    position: absolute;
+    float: left;
+    border-radius: 35px;
+    width: 300px;
+    height: 500px;
+    padding: 40px;
+    object-fit: cover;
+}
+img.bookingvan{
+    position: absolute;
+    z-index: 0;
+    width: 380px;
+    top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+img.logo {
+  	z-index: 2;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  	width: 180px;
+  	pointer-events: none;
+  	border-radius: 50%;
+}
+img.profile {
+  	position: absolute;
+  	z-index: 1;
+	height: 200px;
+  	width: 200px;
+  	top: -1350%;
+	margin-left: 280%;
+	left: 0;
+	right: 0;
+  	border-radius: 50%;
+	box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2);
+}
+img.tracking {
+    position: absolute;
+    z-index: 1;
+    height: 200px;
+    width: 200px;
+    top: -25%;
+    margin-left: 5%;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2); 
+}
+img.btn {
+	z-index: 3;
+  	height: 50px;
+	width: 50px;
+	left: 0;
+	right: 0;
+}
+img.seat {
+    cursor: not-allowed;
+	position: absolute;
+	z-index: 3;
+  	height: 65px;
+	width: 65px;
+	left: 0;
+	right: 0;
+}
+p.seat {
+	position: absolute;
+	z-index: 2;
+  	height: 65px;
+	width: 65px;
+	left: 0;
+	right: 0;
+}
+img.btnbig {
+	z-index: 3;
+  	height: 21%;
+	width: 21%;
+	left: 0;
+	right: 0;
+	border-radius: 30%;
+}
+input.login {
+    border-style: solid;
+    border-color: #DEDCDD;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 60px;
+    width: 55%;
+    min-width: 200px;
+    font-family: 'Mitr';
+    font-size: 26px;
+    background-color: #DEDCDD;
+    text-align: center;
+    opacity:1;
+}
+input.reg {
+    border-style: solid;
+    border-color: #DEDCDD;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 40px;
+    width: 45%;
+    font-family: 'Mitr';
+    font-size: 26px;
+    background-color: #DEDCDD;
+    text-align: center;
+    opacity:1;
+}
+input.profile {
+    border-style: solid;
+    border-color: #DEDCDD;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-family: 'Mitr';
+    font-size: 20px;
+    background-color: #DEDCDD;
+    text-align: center;
+    opacity:1;
+}
+select.profile {
+    border-style: solid;
+    border-color: #DEDCDD;
+    border-width: 1px;
+    border-radius: 10px;
+    height: 40px;
+    width: 30%;
+    font-family: 'Mitr';
+    font-size: 20px;
+    background-color: #DEDCDD;
+    text-align: center;
+    opacity:1;
+}
+input.loginsubmit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-color: #fff;
+    height: 50px;
+    width: 24%;
+    min-width: 200px;
+    border-radius: 8px;
+    font-family: 'Mitr';
+    font-size: 22px;
+    color: #849CAD;
+    text-shadow: none;
+    opacity:1;
+    margin-top: 20vh;
+}
+button.submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #55cd81;
+    border-color: #55cd81;
+    height: 50px;
+    width: 50%;
+    border-radius: 8px;
+    font-family: 'Mitr';
+    font-size: 22px;
+    color: #fff;
+    text-shadow: none;
+    opacity:1;
+}
+button.profilesubmit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #849CAD;
+    border-color: #849CAD;
+    height: 50px;
+    width: 24%;
+    border-radius: 8px;
+    font-family: 'Mitr';
+    font-size: 22px;
+    color: #fff;
+    text-shadow: none;
+    opacity:1;
+}
+button.bookingsubmit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 770px;
+    top: 700px;
+    background: #55cd81;
+    border-color: #55cd81;
+    height: 50px;
+    width: 200px;
+    border-radius: 8px;
+    font-family: 'Mitr';
+    font-size: 22px;
+    color: #fff;
+    text-shadow: none;
+    opacity:1;
+}
+input.logout {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ff4f4f;
+    border-color: #ff4f4f;
+    height: 50px;
+    width: 20%;
+    border-radius: 20px;
+    font-family: 'Mitr';
+    font-size: 22px;
+    color: #fff;
+    text-shadow: none;
+    opacity:1;
+    margin-top: 25vh;
+    min-width: 200px;
+}
+button.btn {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: #424242;
+    border-color: #424242;
+    height: 60px;
+    width: 25%;
+    border-radius: 20px;
+    font-family: 'Mitr';
+    font-size: 22px;
+    color: #fff;
+    text-shadow: none;
+    opacity:1;
+    margin-top: 25vh;
+    min-width: 200px;
+}
+.springs:hover {
+	animation: spring 700ms ease-out;
+}
+.editprofile {
+	cursor: pointer;
+	position: relative;
+    height: 40px;
+    width: 100px;
+    opacity:1;
+}
+.epoverlay {
+	cursor: pointer;
+	position: absolute;
+	top: -1350%;
+	margin-left: 280%;
+	height: 200px;
+	width: 200px;
+	opacity: 0;
+	z-index: 2;
+	transition: 1s ease;
+	border-radius: 50%;
+	background-color: #849CAD;
+}
+.eptext {
+	cursor: pointer;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.editprofile:hover .epoverlay {
+	opacity: 1;
+}
+.previous {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: black;
+    color: #f1f1f1;
+    border-radius: 50%;
+}
+.previous:hover {
+    background-color: #ddd;
+    color: black;
+}
+.next {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: black;
+    color: #f1f1f1;
+    border-radius: 50%;
+}
+.next:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+@keyframes spring {
+    15% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: scale(1.2, 1.1);
+    }
+    40% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: scale(0.95, 0.95);
+    }
+    75% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: scale(1.05, 1);
+    }
+    100% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: scale(1, 1);
+    }
+}
+
+  
+@keyframes anim-popoutin {
+    0% {
+      color: black;
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: black;
+      transform: scale(2);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: black;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }

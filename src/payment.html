@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/payment.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../picture/Icon.png"/>
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Vango - Payment</title>
+</head>
+<body class="noselect" style="background-image: url('../picture/BG1.png');" ng-app="formModule" ng-controller="formController" ng-init="init()">
+    <input type="hidden" id="UID" name="UID" value="{{id}}" >
+    <center><h1 style="font-size: 52px; color: white; text-shadow: 3px 3px 5px black;">ชำระเงิน</h1></center>
+    <div class="payment">
+        <div class="editprofile">
+            <a href="/home"><img style="width: 30px; height: 30px;" class="springs" src="../picture/Back.png"></a>
+        </div>
+        <center><div class="profile">
+            <label for="banknum">เลขบัญชี</label>
+            <input style="width: 200px; margin-left:10%" class="profile springs" type="text" id="banknum" name = "banknum" size="30" value="123456789" readonly>
+            <br></br>
+            <label for="bank">ธนาคาร</label>
+            <input style="width: 200px; margin-left:13%" class="profile springs" type="text" id="bank" name = "bank" size="30" value="กสิกร" readonly>
+            <br></br>
+            <label for="price">จำนวนเงิน</label>
+            <input style="width: 200px; margin-left:8%" class="profile springs" type="text" id="price" name = "price" size="30" value="{{price}}" readonly>
+            <br></br>
+            <img src="./picture/Qr.png" style="width: 200px; height: 200px;">
+            <br></br>
+            <button class="submit" id="btn">ยืนยันการชำระ</button>
+        </div></center>
+        <br>
+    </div>
+</body>
+</html>

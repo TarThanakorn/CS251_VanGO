@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/editst.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../picture/Icon.png"/>
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Vango - EditStatus</title>
+</head>
+<body class="noselect" style="background-image: url('../picture/BG1.png');" ng-app="formModule" ng-controller="formController" ng-init="init()">
+    <br>
+    <center><a style="font-size: 42px; color: whitesmoke; text-shadow: 3px 3px 4px black;">แก้ไขสถานะ #{{rid}}</a></center>
+    <div class="profilebox" style="width: 400px;">
+        <form>
+            <div class="newroute">
+                <label for="from">ต้นทาง</label>
+                <input type="text" style="width: 200px; float:right;" class="profile" id="from" name = "from" value="{{from}}" readonly>
+                <br></br><br>
+                <label for="exit">ปลายทาง</label>
+                <input type="text" style="width: 200px; float:right;" class="profile" id="exit" name = "exit" value="{{exit}}" readonly>
+                <br></br><br>
+                <label for="date">วันที่</label>
+                <input type="text" style="width: 200px; float:right;" class="profile" id="date" name = "date" value="{{date}}" readonly>
+                <br></br><br>
+                <label for="time">เวลา</label>
+                <input type="text" style="width: 200px; float:right;" class="profile" id="time" name = "time" value="{{time}}" readonly>
+                <br></br><br>
+                <label for="price">ราคาตั๋ว</label>
+                <input type="text" maxlength="3" style="width: 200px; float:right;" class="profile" id="price" name = "price" value="{{price}}" readonly>
+                <br></br><br>
+                <label for="status">สถานะ</label>
+                <select style="width: 200px; float:right;" class="profile" id="status" name = "status" required>
+                    <option value="1" id="s1">ยังไม่ออกเดินทาง</option>
+                    <option value="2" id="s2">เตรียมตัวออกเดินทาง</option>
+                    <option value="3" id="s3">กำลังเดินทาง</option>
+                    <option value="4" id="s4">ถึงจุดหมายแล้ว</option>
+                </select>
+                <br></br>
+                <label for="btns"></label>
+                <br>
+                <button class="bookingsubmit springs" style="cursor: pointer;" id="btns">แก้ไข</button>
+            </div>
+        </form>
+    </div>
+    <a style="text-decoration: none; cursor: default;" href="/statusroute"><input type="button" style="margin-top: 3vh;" class="logout springs"  value="ย้อนกลับ"></a>
+</body>
+</html>

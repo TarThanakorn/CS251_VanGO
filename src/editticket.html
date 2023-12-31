@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/angular.min.js"></script>
+<script src="../js/editticket.js"></script>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Mitr' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="../picture/Icon.png"/>
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Vango - EditTicket</title>
+</head>
+<body class="noselect" style="background-image: url('../picture/BG2.png');" ng-app="formModule" ng-controller="formController" ng-init="init()">
+    <br></br>
+    <form>
+        <input type="hidden" id="UID" name="UID" value="{{id}}" >
+        <div id="block_container">
+            <div class="bookingbox" style="margin-left: 400px">
+				<label for="from">ต้นทาง</label>
+                <select style="width: 200px; float:right;" class="profile" id="from" name = "from" disabled="true">
+                    <option value="-" id="f0" disabled selected>เลือก</option>
+                    <option value="1" id="f1">ม.ธรรมศาสตร์</option>
+                    <option value="2" id="f2">ฟิวเจอร์ปาร์ค</option>
+                    <option value="3" id="f3">อนุสาวรีย์ชัยฯ</option>
+                    <option value="4" id="f4">BTSหมอชิต</option>
+                </select>
+                <br></br><br>
+				<label for="exit">ปลายทาง</label>
+				<select style="width: 200px; float:right;" class="profile" id="exit" name = "exit" disabled="true">
+                    <option value="-" id="e0" disabled selected hidden>เลือก</option>
+                    <option value="1" id="e1" hidden>ม.ธรรมศาสตร์</option>
+                    <option value="2" id="e2" hidden>ฟิวเจอร์ปาร์ค</option>
+                    <option value="3" id="e3" hidden>อนุสาวรีย์ชัยฯ</option>
+                    <option value="4" id="e4" hidden>BTSหมอชิต</option>
+                </select>
+                <br></br><br>
+                <label for="date">วันที่</label>
+				<select style="width: 200px; float:right;" class="profile" id="date" name = "date" required>
+                    <option value="-" id="e0" disabled selected hidden>เลือก</option>
+                </select>
+                <br></br><br>
+                <label for="time">เวลา</label>
+				<select style="width: 200px; float:right;" class="profile" id="time" name = "time" required>
+                    <option value="-" id="e0" disabled selected hidden>เลือก</option>
+                </select>
+                <input type="hidden" id="RID" name="RID" value="0">
+                <input type="hidden" id="DSeat" name="DSeat" value="0">
+                <br></br><br>
+                <label for="time">จำนวนที่นั่งที่เลือก</label>
+				<input type="text" style="width: 100px; float:right;" class="profile" id="seatc" value = "{{seatc}}" readonly>
+                <br></br>
+                <center><p style="color: red;" id="alert">{{alert}}</button></center>
+                <label for="btns"></label>
+                <button class="bookingsubmit springs" style="cursor: pointer;" id="btn">บันทึกการแก้ไข</button>
+                <br>
+                <a href="/tracking"><img style="z-index: 4; width: 30px; height: 30px;" class="springs" src="../picture/Back.png"></a>
+            </div>
+            <div class="bookingbox2" style="margin-left: 950px;">
+                <p class="booking pop-outin" id="pbook">เลือกที่นั่ง</p>
+                <img class="bookingvan" src="./picture/Van.png">
+                <img class="seat" id="seat1" style="margin-left: 80px; margin-top: 80px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 80px; margin-top: 80px;">S1</p>
+                <img class="seat" id="seat2" style="margin-left: 150px; margin-top: 80px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 150px; margin-top: 80px;">S2</p>
+                <img class="seat" id="seat3" style="margin-left: 120px; margin-top: 200px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 120px; margin-top: 200px;">S3</p>
+                <img class="seat" id="seat4" style="margin-left: 185px; margin-top: 200px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 185px; margin-top: 200px;">S4</p>
+                <img class="seat" id="seat5" style="margin-left: 250px; margin-top: 200px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 250px; margin-top: 200px;">S5</p>
+                <img class="seat" id="seat6" style="margin-left: 70px; margin-top: 290px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 70px; margin-top: 290px;">S6</p>
+                <img class="seat" id="seat7" style="margin-left: 185px; margin-top: 290px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 185px; margin-top: 290px;">S7</p>
+                <img class="seat" id="seat8" style="margin-left: 250px; margin-top: 290px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 250px; margin-top: 290px;">S8</p>
+                <img class="seat" id="seat9" style="margin-left: 70px; margin-top: 375px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 70px; margin-top: 375px;">S9</p>
+                <img class="seat" id="seat10" style="margin-left: 185px; margin-top: 375px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 175px; margin-top: 375px;">S10</p>
+                <img class="seat" id="seat11" style="margin-left: 250px; margin-top: 375px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 245px; margin-top: 375px;">S11</p>
+                <img class="seat" id="seat12" style="margin-left: 70px; margin-top: 460px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 65px; margin-top: 460px;">S12</p>
+                <img class="seat" id="seat13" style="margin-left: 185px; margin-top: 460px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 175px; margin-top: 460px;">S13</p>
+                <img class="seat" id="seat14" style="margin-left: 250px; margin-top: 460px;" src="./picture/Seat.png">
+                <p class="seat" style="margin-left: 245px; margin-top: 460px;">S14</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
